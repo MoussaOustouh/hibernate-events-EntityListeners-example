@@ -1,16 +1,21 @@
 package mo.spring.hibernateeventsentitylistenersexample.entities;
 
+import mo.spring.hibernateeventsentitylistenersexample.mo_traceability.entities_listeners.implementations.MemberEntityListner;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import java.util.Set;
 
 @Entity
 @Table(name = "members")
+@EntityListeners(MemberEntityListner.class)
 public class Member {
 
     private Long id;
