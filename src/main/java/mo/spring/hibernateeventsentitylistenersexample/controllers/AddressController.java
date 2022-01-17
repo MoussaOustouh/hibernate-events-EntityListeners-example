@@ -5,6 +5,7 @@ import mo.spring.hibernateeventsentitylistenersexample.exceptions.ResourceNotFou
 import mo.spring.hibernateeventsentitylistenersexample.repositories.AddressRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -59,5 +60,14 @@ public class AddressController {
 
         address = addressRepository.save(address);
         return ResponseEntity.ok(address);
+    }
+
+    @DeleteMapping("/addresses/{id}")
+    public ResponseEntity<String> removeAddress(@PathVariable(value = "id") Long addressId){
+        if(addressRepository.existsById(addressId)){
+            addressRepository.deleteById(addressId);
+            return ResponseEntity.ok("Deleted");
+        }
+        return ResponseEntity.ok("Not exist");
     }
 }
