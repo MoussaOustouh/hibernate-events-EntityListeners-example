@@ -1,9 +1,11 @@
 package mo.spring.hibernateeventsentitylistenersexample.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import mo.spring.hibernateeventsentitylistenersexample.mo_traceability.entities_listeners.implementations.AddressEntityListner;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,6 +15,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "addresses")
+@EntityListeners(AddressEntityListner.class)
 public class Address {
     private Long id;
     private String street1;

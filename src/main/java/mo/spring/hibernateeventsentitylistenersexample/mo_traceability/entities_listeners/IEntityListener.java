@@ -2,10 +2,10 @@ package mo.spring.hibernateeventsentitylistenersexample.mo_traceability.entities
 
 public interface IEntityListener {
     void prePersist(Object entity);
-    void preUpdate(Object entity);
-    void preRemove(Object entity);
-    void postLoad(Object entity);
-    void postRemove(Object entity);
-    void postUpdate(Object entity);
     void postPersist(Object entity);
+    void preUpdate(Object entity);
+    void postUpdate(Object entity);
+    void preRemove(Object entity);
+    void postRemove(Object entity);
+    void postLoad(Object entity);
 }
