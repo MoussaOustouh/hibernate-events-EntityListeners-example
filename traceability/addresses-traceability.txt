@@ -1,2 +1,0 @@
-AddressDTO{action='CREATE', ip='156.145.100.9', userId=36, Address{id=1, street1='2 Pelham Circle', street2='', city='Stratford', state='CT', zip='00431'}} 
-AddressDTO{action='CREATE', ip='130.15.45.12', userId=36, Address{id=1, street1='2 Pelham Circle', street2='', city='Stratford', state='CT', zip='00431'}} 

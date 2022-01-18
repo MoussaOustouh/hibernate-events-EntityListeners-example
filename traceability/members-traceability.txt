@@ -1,2 +1,0 @@
-MemberDTO{action='CREATE', ip='130.15.45.12', userId=36, Member{id=1, firstName='David', lastName='Price', emailId='dprice@gmail.com'}} 
-MemberDTO{action='CREATE', ip='130.15.45.12', userId=36, Member{id=1, firstName='David', lastName='Price', emailId='dprice@gmail.com'}} 
