@@ -11,12 +11,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.Set;
 
 @Entity
 @Table(name = "members")
 @EntityListeners(MemberEntityListner.class)
-public class Member {
+public class Member implements Serializable {
 
     private Long id;
     private String firstName;
@@ -78,7 +79,6 @@ public class Member {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", emailId='" + emailId + '\'' +
-                ", addresses=" + addresses +
                 '}';
     }
 }

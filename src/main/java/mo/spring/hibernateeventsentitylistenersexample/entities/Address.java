@@ -12,11 +12,12 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "addresses")
 @EntityListeners(AddressEntityListner.class)
-public class Address {
+public class Address implements Serializable {
     private Long id;
     private String street1;
     private String street2;
